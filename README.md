@@ -7,11 +7,18 @@ I found myself spending several hours every week cross referencing the reported 
 
 PayrollEntry.py is the script that I created. The program prompts the user for the date of the payroll, the taxes required (reported from ADP), and the dollar amount required (reported from ADP). From there, using the date entered, reads from the spreadsheet, 'Job List 2021.xlsx', and steps through the 'TimeSheets' sheet, gathering the information for the job site each employee worked on each day of the payroll week. The script records each job the employee worked during the week, tallies up the hours worked on each job,  multiplies the hours by the wage of each employee, and stores this information in a python dictionary. Once the data is collected, the script formats the data from the spreadsheet, along with other hardcoded payroll deduction data, and outputs to PAYROLL.CSV, which can then be imported to Sage 50 Accounting, as a general journal entry.
 
+### Python and Package info:
+
+Coded in Python 3.9
+
+Installed package xlrd 1.2.0
+<p>**NOTE**</p> xlrd 2.0+ will not function properly, as they have removed the functionality to read .xlsx files.
+
 <br>
-Files included:
-<br>
+
+### Files included:
 <b>PayrollEntry.py</b> - Script that reads Job List 2021.xlsx spreadsheet and formats data to CSV to import to Sage 50 Accounting
-<br>
+
 <b>Job List 2021.xlsx</b> - Excel Spreadsheet that tracks job costing and employee timesheets
 
 <b>PAYROLL.CSV</b> - Ouput file used to import General Journal Entry to Sage 50 Accounting.
